@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+}
+
+html body {
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  min-height: 100%;
+  background: #eee;
+}
+body {
+  /* height: 3000px; */
+}
+header {
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  background: rgb(168, 235, 102);
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+header h1 {
+  width: 100%;
+  text-align: center;
+}
+header .header-logo {
+  font-size: 2em;
+}
+.disapear {
+  visibility: hidden;
+  /* display: none; */
+  /*why cannot use display none  */
+}
+
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.24);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dialog-close-btn {
+  position: absolute;
+  left: 100%;
+  bottom: 100%;
+  outline: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+.dialog {
+  position: relative;
+  background: white;
+  max-width: 600px;
+  margin: 10px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  max-height: 50vh;
+}
+.dialog-body {
+  height: 150px;
+  overflow: auto;
+}
+.dialog-agree-btn {
+  align-self: flex-end;
+}
+main {
+  max-width: 600px;
+  margin: auto;
+}
+
+.input-group {
+  background: rgb(214, 163, 213);
+  padding: 2.4em;
+  margin-top: 3.5em;
+  border-radius: 15px;
+  box-shadow: 10px 10px 8px #888888;
+  font-weight: bold;
+  display: flex;
+}
+.input-group input {
+  font-weight: inherit;
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  background: transparent;
+  border-bottom: 2px solid black;
+  margin-right: 2rem;
+  padding-bottom: 5px;
+}
+.input-group input:focus,
+.input-group input:hover {
+  border-bottom: 2px solid red;
+}
+
+.input-group button {
+  font-weight: inherit;
+  font-style: italic;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.input-group button:hover,
+.input-group button:focus {
+  background: #eee;
+}
+.input-group button:active {
+  background: rgb(122, 117, 117);
+}
+
+.todo-list {
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  border-bottom: 1px solid;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.todo-name {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.delete-todo {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  width: 2em;
+  height: 2em;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  font: inherit;
+}
+.delete-todo:focus,
+.delete-todo:hover {
+  border: 2px solid red;
+  border-radius: 100%;
+  opacity: 1;
+}
+
+.todo-item:hover .delete-todo {
+  opacity: 1;
+}
